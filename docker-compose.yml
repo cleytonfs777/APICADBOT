@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_cad
+    restart: always
+    environment:
+      POSTGRES_USER: caduser
+      POSTGRES_PASSWORD: cadpassword
+      POSTGRES_DB: cad
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

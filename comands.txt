@@ -1,0 +1,2 @@
+nohup python3 index.py > index.log 2>&1 &
+nohup python3 update_lat_log.py > update.log 2>&1 &
